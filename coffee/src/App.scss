@@ -9,3 +9,20 @@
         max-width: 100%;
     }
 }
+
+:root {
+    --main-bg-color: #000;
+    --second-bg-color: #fff;
+    --button-bg-color: #C7A17A;
+    --colorMain: #fff;
+    --colorSecond: #000;
+    
+}
+
+.light {
+    --main-bg-color: #fff;
+    --second-bg-color: #000;
+    --colorMain: #000;
+    --colorSecond: #fff;
+    --button-bg-color: #C7A17A;
+}
