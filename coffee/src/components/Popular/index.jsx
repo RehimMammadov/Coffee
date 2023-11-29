@@ -3,7 +3,13 @@ import "./index.scss"
 
 const Popular = () => {
   return (
-    <div>Popular</div>
+    <section id='popularMenu'>
+      <div className="wrapper">
+        .card
+      </div>
+
+
+    </section>
   )
 }
 
