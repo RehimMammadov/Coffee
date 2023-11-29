@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Reservation from './pages/Reservation'
 import Shop from './pages/Shop'
+import "./App.scss"
 
 const App = () => {
   return (
