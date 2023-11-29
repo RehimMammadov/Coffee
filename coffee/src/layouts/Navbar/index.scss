@@ -1,0 +1,119 @@
+nav {
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--colorMain);
+  background-color: var(--main-bg-color);
+  color: var(--colorMain);
+  .nav-inner {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-evenly;
+      .navlink {
+        color: var(--colorMain);
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+        width: 100%;
+        &:hover {
+          color: var(--button-bg-color);
+          transition: 0.3s;
+        }
+      }
+      li {
+        position: relative;
+        align-self: stretch;
+        .circle {
+          position: absolute;
+          background-color: var(--button-bg-color);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          top: 3px;
+          left: -5px;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &:hover .circle {
+          left: -15px;
+          opacity: 1;
+          transition: 0.3s;
+        }
+      }
+    }
+    .navtexts {
+      width: 40%;
+    }
+    .logo {
+      width: 25%;
+      text-align: center;
+      img {
+        cursor: pointer;
+      }
+    }
+    .nav-texts {
+      width: 25%;
+      align-self: stretch;
+      ul{
+        .submenu{
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: var(--second-bg-color);
+            width: 250px;
+            border-radius: 7px;
+            height: 0px;
+            overflow: hidden;
+            transition: 0.5s;
+            .sub-texts{
+                display: block;
+                color: var(--colorSecond);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: space-between;
+                font-weight: bold ;
+                padding: 20px;
+                li{
+                    transition: 0.5s;
+                    cursor: pointer;
+                }
+                li:hover{
+                    color: var(--button-bg-color);
+                    transform: translateX(5px);
+                    transition: 0.5s;
+                }
+            }
+        }
+        .sub-link{
+            display: flex;
+            align-items: center;
+        }
+        .sublink:hover .submenu{
+            height: 250px!important;
+            transition: 0.5s;
+        }
+      }
+    }
+    .buttons {
+      width: 10%;
+      display: flex;
+      justify-content: space-around;
+      i {
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          color: var(--button-bg-color);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
