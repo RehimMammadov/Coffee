@@ -27,7 +27,7 @@ const Header = () => {
       className={`${isIframeOpen ? 'iframe-active' :''}`}
         src="https://www.youtube.com/embed/gvPetTPFsZM"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
       ></iframe>
 
       </div>

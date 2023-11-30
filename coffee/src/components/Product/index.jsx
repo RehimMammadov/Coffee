@@ -5,7 +5,7 @@ import useFetchData from '../../hooks/UseFetchData';
 
 const Product = () => {
   const { data, isLoading, error } = useFetchData("products");
-
+console.log(data);
   return (
     <div className='products-main-container'>
         {

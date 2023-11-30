@@ -7,11 +7,11 @@
     flex-wrap: wrap;
 
     .image {
-        width: 50%;
+        width: 40%;
         overflow: hidden;
 
         img {
-
+            width: 100%;
             transition: 0.9s;
         }
 
@@ -22,7 +22,7 @@
     }
 
     .texts {
-        width: 50%;
+        width: 60%;
         padding: 50px 100px;
         color: var(--colorMain);
         background-color: var(--main-bg-color);
