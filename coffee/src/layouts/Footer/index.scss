@@ -1,0 +1,209 @@
+footer {
+    background-image: url("https://xpressrow.com/html/cafena/cafena/assets/images/bg/footer-3-1.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footerbox {
+        width: 80%;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+
+            .top-part {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 50px;
+
+                .directions {
+                    ul {
+                        display: flex;
+
+                        li {
+                            display: flex;
+                            margin-left: 50px;
+
+                            p {
+                                color: white;
+
+                                a {
+                                    color: gray;
+                                }
+                            }
+
+                            i {
+                                color: rgb(211, 173, 127);
+                                margin-right: 20px;
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                }
+
+                .logo {
+                    margin-top: 70px;
+                    padding-left: 40px;
+                }
+
+
+                .top-button {
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+
+                    span {
+                        a {
+                            color: gray;
+                        }
+                    }
+                }
+
+                .input-subscribe {
+                    position: relative;
+                    width: 260px;
+                    input {
+
+                        background-color: black;
+                        color: gray;
+                        border: none;
+                        outline: none;
+                        border-bottom: 1px solid gray;
+
+                        placeholder {
+                            color: gray;
+                        }
+                    }
+
+                    .email-sub {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: flex;
+                        gap: 10px;
+
+                        a {
+                            color: white;
+                        }
+
+                        i {
+                            color: white;
+                        }
+                    }
+
+                }
+            }
+
+            .bottom-part {
+                align-items: end;
+                justify-content: space-between;
+                display: flex;
+                padding-bottom: 70px;
+
+                .info {
+                    padding-left: 40px;
+                    margin-top: 16px;
+
+                    p {
+                        color: white;
+                        width: 580px;
+                    }
+                }
+
+                .social-media {
+                    cursor: pointer;
+                    display: flex;
+                    gap: 10px;
+
+                    .twitter {
+                        color: gray;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid gray;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .twitter:hover {
+                        color: white;
+                        border: 1px solid white;
+                        transition: 0.4s;
+                    }
+
+                    .facebook {
+                        color: gray;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid gray;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .facebook:hover {
+                        color: white;
+                        border: 1px solid white;
+                        transition: 0.4s;
+                    }
+
+                    .youtube {
+                        color: gray;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid gray;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .youtube:hover {
+                        color: white;
+                        border: 1px solid white;
+                        transition: 0.4s;
+                    }
+
+                    .google {
+                        color: gray;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid gray;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .google:hover {
+                        color: white;
+                        border: 1px solid white;
+                        transition: 0.4s;
+                    }
+
+                    .instagram {
+                        color: gray;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid gray;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .instagram:hover {
+                        color: white;
+                        border: 1px solid white;
+                        transition: 0.4s;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+}
