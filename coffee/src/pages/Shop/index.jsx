@@ -3,11 +3,13 @@ import "./index.scss"
 import useFetchData from '../../hooks/UseFetchData'
 import ProductCard from '../../components/ProductCard';
 import Product from '../../components/Product';
+import Sort from '../../components/Sort';
+import Filter from '../../components/Filter';
 
 const Shop = () => {
 
   return (
-    <div className='max-w-[90%] mx-auto'>
+    <div>
       <div className='contact-main'>
             <h2>CAFENA PRODUCT</h2>
             <div className='home-slash-page'>
@@ -15,7 +17,13 @@ const Shop = () => {
               <span>PRODUCT</span>
             </div>
       </div>
-      <Product />
+      <div style={{maxWidth: "83%", margin: "0 auto"}}>
+          <Sort />
+        <div style={{width: "100%", display: "flex", justifyContent: "space-between"}}>
+          <Product />
+          <Filter />
+        </div>
+      </div>
     </div>
   )
 }
