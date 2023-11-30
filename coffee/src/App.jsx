@@ -6,7 +6,8 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Reservation from './pages/Reservation'
 import Shop from './pages/Shop'
-import Menu from './pages/Menu/index';
+import "./App.scss"
+import Menu from './pages/Menu'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/menu' element={<Menu />} />
         <Route path='/reservation' element={<Reservation />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/menu' element={<Menu />} />
       </Route>
     </Routes>
   )

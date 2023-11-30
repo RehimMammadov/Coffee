@@ -182,12 +182,6 @@
       "price": 12
     }
   ],
-  "contact": [
-    {
-      "id": 1,
-      "name": ""
-    }
-  ],
   "best": [
     {
       "id": 1,
@@ -224,5 +218,7 @@
       "description": "Questions Business Must Be Able To Answers",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/blog/blog-3.jpeg"
     }
-  ]
+  ],
+  "contact": [],
+  "reservation": []
 }
