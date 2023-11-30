@@ -112,38 +112,42 @@
       "id": 2,
       "name": "JAPANIS COFFEE GRED",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-1.png",
-      "category": "Hot Cofee"
+      "category": "Hot Coffee",
+      "price": 12
     },
     {
       "id": 3,
       "name": "CAFÈ AU LAIT Coffee",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-3.png",
-      "category": "Cold Cofee"
+      "category": "Cold Coffee",
+      "price": 12
     },
     {
       "id": 4,
       "name": "ESPRESSO RISTRETTO Coffee",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-3.png",
-      "category": "Cold Drink"
+      "category": "Cold Drink",
+      "price": 12
     },
     {
       "id": 5,
       "name": "VIRGIN COFFEE GRED",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-5.png",
-      "category": "Hot Drink"
+      "category": "Hot Drink",
+      "price": 12
     },
     {
       "id": 6,
       "name": "ESPRESSO RISTRETTO Coffee",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-6.png",
-      "category": "Hot Cofee",
+      "category": "Hot Coffee",
       "price": 12
     },
     {
       "id": 7,
       "name": "BRAZIL COFFEE GRED",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-1.png",
-      "category": "Cold Cofee",
+      "category": "Cold Coffee",
       "price": 12
     },
     {
@@ -164,14 +168,14 @@
       "id": 10,
       "name": "Turkish Rosted Coffee",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-3.png",
-      "category": "Hot Cofee",
+      "category": "Hot Coffee",
       "price": 12
     },
     {
       "id": 11,
       "name": "Bangladeshi Rosted Coffee",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-5.png",
-      "category": "Cold Cofee",
+      "category": "Cold Coffee",
       "price": 12
     },
     {
@@ -185,7 +189,7 @@
   "best": [
     {
       "id": 1,
-      "name": "BEST COFEE FLAVOUR",
+      "name": "BEST Coffee FLAVOUR",
       "description": "Curabitur semper erat a lacusey sedn consequat, sit ametey.",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/f-1.jpeg"
     },
@@ -217,6 +221,44 @@
       "id": 3,
       "description": "Questions Business Must Be Able To Answers",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/blog/blog-3.jpeg"
+    }
+  ],
+  "popular": [
+    {
+      "id": 1,
+      "name": "AMERICANO ROSTED GRED",
+      "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-1.png",
+      "price": 15
+    },
+    {
+      "id": 2,
+      "name": "VIRGIN COFFEE GRED",
+      "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-2.png",
+      "price": 42
+    },
+    {
+      "id": 3,
+      "name": "CAFE AU LAIT GRED",
+      "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-3.png",
+      "price": 25
+    },
+    { 
+      "id": 4,
+      "name": "JAPANESE COFFEE GRED",
+      "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-4.png",
+      "price": 32
+    },
+    {
+      "id": 5,
+      "name": "JAPANESE COFFEE GRED",
+      "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-5.png",
+      "price": 62
+    },
+    {
+      "id": 6,
+      "name": "ESPRESSO RISTERETTO",
+      "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-6.png",
+      "price": 25
     }
   ],
   "contact": [],

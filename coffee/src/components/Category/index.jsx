@@ -6,16 +6,13 @@ const Category = () => {
     <div className='search-product'>
       <h2>SEARCH HERE</h2>
       <div className='search-svg'>
-        <button>Hot Coffees <span>04</span></button>
+        <button>CREUSET COCOTTE <span>04</span></button>
       </div>
       <div className='search-svg'>
-        <button>Cold Coffees <span>06</span></button>
+        <button>ROSTED COFFEE <span>06</span></button>
       </div>
       <div className='search-svg'>
-        <button>Hot Drinks <span>08</span></button>
-      </div>
-      <div className='search-svg'>
-        <button>Cold Drinks <span>10</span></button>
+        <button>CAPPUCINO <span>08</span></button>
       </div>
     </div>
   )
