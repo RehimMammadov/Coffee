@@ -4,9 +4,9 @@ header {
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     color: var(--colorMain);
-    padding: 140px 100px 60px 100px;
+    padding: 200px 100px 60px 100px;
 
     .header-inner {
         width: 500px;
@@ -41,6 +41,7 @@ header {
     }
 
     .links {
+        padding-top: 50px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -76,19 +77,20 @@ header {
         left: 30%;
         width: 600px;
         height: 400px;
-        display: none;
+        transform: scale(0);
+        transition: 0.5s;
         z-index: 1;
     }
 }
 
 .iframe-active {
-    display: block !important;
+    transform: scale(1);
     transition: 0.5s;
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 425px) {
     header {
-        padding: 20px;
+        padding: 200px 20px 20px 20px;
 
         .header-inner {
             width: 90%;
@@ -130,7 +132,7 @@ header {
     }
 }
 
-@media screen and (min-width:425px) and (max-width: 578px) {
+@media screen and (min-width:426px) and (max-width: 578px) {
     header {
         padding: 20px;
 
