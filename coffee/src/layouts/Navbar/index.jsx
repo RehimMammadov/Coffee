@@ -59,7 +59,7 @@ const Navbar = () => {
           <div className="buttons">
             <i onClick={()=>setIsSearchOpen(!isSearchOpen)} className={`fa-solid ${isSearchOpen ? 'fa-xmark' : 'fa-magnifying-glass'}`}></i>
             <i className="fa-regular fa-sun"></i>
-            <i className="fa-solid fa-basket-shopping">
+            <i onClick={()=>navigate('/basket')} className="fa-solid fa-basket-shopping">
               <p className="message">0</p>
             </i>
             <i onClick={() => setIsNavOpen(!isNavOpen)} className="fa-solid fa-bars"></i>

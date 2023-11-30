@@ -247,15 +247,13 @@ nav {
     right: 100px;
     transform: scale(0);
     transition: 0.5s;
-    :focus{
-      border: none;
-    }
 
 
     input {
       height: 50px;
       width: 250px;
       border: none;
+    outline: none;
       text-align: center;
       background-color: var(--button-bg-color);
     }

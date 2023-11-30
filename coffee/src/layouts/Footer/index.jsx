@@ -1,55 +1,40 @@
 import React from 'react'
 import "./index.scss"
+import Logo from "../../../public/img/logo.png"
+import ScrollToTopButton from '../../components/ScrollToTop'
 
 const Footer = () => {
   return (
     <footer>
-      <div className="footerbox">
-        <div className='top'>
-          <div className='top-part'>
-            <div className='directions'>
-              <ul>
-                <li><i className="fa-solid fa-mobile-screen"></i>
-                  <p>PHONE :<a href="">+88019 339 702 520</a></p></li>
-                <li><i class="fa-solid fa-location-dot"></i>
-                  <p>ADDRESS : <a href="">30 North West New</a></p></li>
-              </ul>
-            </div>
-
-            <div className='input-subscribe'>
-              <input type="text" placeholder='Enter your email' />
-              <div className="email-sub">
-              <a href="">Subscribe</a>
-              <i class="fa-solid fa-paper-plane"></i>
-              </div>
-              
-            </div>
-
-            <div className='top-button'>
-              <span><a href="">GO TO TOP</a></span>
-            </div>
+      <div className="scroll-top">
+        <ScrollToTopButton />
+        <p>GO TO TOP</p>
+      </div>
+      <div className="footer-inner">
+        <div className="footer-details">
+          <div className="phone">
+            <p><i class="fa-solid fa-mobile-screen-button"> </i> PHONE: +994 50 5798656</p>
           </div>
-          
-          <div className='bottom-part'>
-            <div className='info'>
-              <img src="https://xpressrow.com/html/cafena/cafena/assets/images/logo/logo.png" alt="cofee-logo" />
-              <p>
-                Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut quam quis quam venenatis fringilla. Morbi vestibulum</p>
-            </div>
-
-            <div className='social-media'>
-              <div className='twitter'><i class="fa-brands fa-twitter"></i></div>
-              <div className='facebook'><i class="fa-brands fa-square-facebook"></i></div>
-              <div className='youtube'> <i class="fa-brands fa-youtube"></i></div>
-              <div className='google'><i class="fa-brands fa-google-plus-g"></i></div>
-              <div className='instagram'><i class="fa-brands fa-instagram"></i></div>
-            </div>
+          <div className="address">
+            <p><i class="fa-solid fa-location-dot"></i> ADDRESS: Binagadi, Biladjari</p>
+          </div>
+          <div className="email">
+            <input type="email" placeholder='Enter your email...' />
+            <p>SUBSCRIBE <i class="fa-brands fa-telegram"></i></p>
           </div>
         </div>
-
-        <div className='bottom'>
-          <div className='links'></div>
-          <button className='button-to-top'></button>
+        <div className="social-media">
+          <div className="logo">
+            <img src={Logo} alt="" />
+            <p>Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut quam quis quam venenatis fringilla. Morbi vestibulum</p>
+          </div>
+          <div className="links">
+            <i className='fa-brands fa-twitter'></i>
+            <i className='fa-brands fa-facebook'></i>
+            <i className='fa-brands fa-youtube'></i>
+            <i className='fa-brands fa-google-plus'></i>
+            <i className='fa-brands fa-instagram'></i>
+          </div>
         </div>
       </div>
     </footer>
