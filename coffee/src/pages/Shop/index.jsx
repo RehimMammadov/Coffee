@@ -1,7 +1,4 @@
-import React from 'react'
-import "./index.scss"
-import useFetchData from '../../hooks/UseFetchData'
-import ProductCard from '../../components/ProductCard';
+import React from 'react';
 import Product from '../../components/Product';
 import Sort from '../../components/Sort';
 import Filter from '../../components/Filter';

@@ -20,6 +20,7 @@ const ProductCard = ({product}) => {
         <h4>{product.name}</h4>
         <h5>PRICE - <span className='discount'>${product.discountPrice} / </span> <span className='price'>${product.price}</span></h5>
     </div>
+    
   )
 }
 
