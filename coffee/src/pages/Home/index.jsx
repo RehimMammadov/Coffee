@@ -12,7 +12,7 @@ import "./index.scss";
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Header />
       <Best />
       <Story />
@@ -22,7 +22,7 @@ const Home = () => {
       <Slider />
       <Map />
       <News />
-    </>
+    </main>
   );
 };
 
