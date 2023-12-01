@@ -11,7 +11,7 @@ import Map from "../../components/Map";
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Header />
       <Best />
       <Story />
@@ -20,7 +20,7 @@ const Home = () => {
       <CafenaPopular />
       <Slider />
       <Map />
-    </>
+    </main>
   );
 };
 

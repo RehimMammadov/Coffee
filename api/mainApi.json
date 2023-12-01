@@ -6,7 +6,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-2.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-3.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00,
+      "discountPrice": 325,
       "status": "popular"
     },
     {
@@ -23,7 +23,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-3.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-2.png",
       "category": "CREUSET COFFEE",
       "price": 348,
-      "discountPrice": 325.00,
+      "discountPrice": 325,
       "status": "popular"
     },
     {
@@ -40,7 +40,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-5.png",
       "category": "CREUSET COCOTTE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 6,
@@ -48,7 +48,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-8.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 7,
@@ -56,7 +56,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-9.png",
       "category": "CAPPUCINO",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 8,
@@ -64,7 +64,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-9.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 9,
@@ -72,7 +72,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-10.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 10,
@@ -80,7 +80,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-12.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00,
+      "discountPrice": 325,
       "status": "popular"
     },
     {
@@ -89,7 +89,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-12.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     },
     {
       "id": 12,
@@ -97,7 +97,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-12.png",
       "category": "ROSTED COFFEE",
       "price": 348,
-      "discountPrice": 325.00
+      "discountPrice": 325
     }
   ],
   "menu": [
@@ -242,7 +242,7 @@
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-3.png",
       "price": 25
     },
-    { 
+    {
       "id": 4,
       "name": "JAPANESE COFFEE GRED",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-4.png",
@@ -261,6 +261,24 @@
       "price": 25
     }
   ],
-  "contact": [],
-  "reservation": []
+  "contact": [
+    {
+      "name": "Rahim",
+      "email": "rehim.com",
+      "subject": "Coffee",
+      "message": "I want CAFÈ AU LAIT Coffee",
+      "id": 1
+    }
+  ],
+  "reservation": [
+    {
+      "name": "Rahim",
+      "number": "44444444444444",
+      "seates": "4",
+      "date": "2024-08-23",
+      "time": "20:00",
+      "email": "rehim.com",
+      "id": 1
+    }
+  ]
 }

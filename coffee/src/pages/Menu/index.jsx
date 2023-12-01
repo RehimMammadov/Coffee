@@ -28,7 +28,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-      <div className="wrapper">
+      <div style={{maxWidth: "80%"}} className="wrapper">
         {data.map((item) => (
           <div className="popularCard">
             <div className="bg-animation"></div>

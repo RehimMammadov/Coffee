@@ -43,7 +43,7 @@ const Navbar = () => {
                 <NavLink className={'navlink'} to={"/shop"}><div className="circle"></div>SHOP</NavLink>
                 <div className="submenu">
                   <ul className="sub-texts">
-                    <li>SHOP</li>
+                    <li><Link to={"/shop"}>SHOP</Link></li>
                     <li>SHOP DETAILS</li>
                     <li>SHOP CART</li>
                     <li>SHOP CHECKOUT</li>
@@ -74,13 +74,13 @@ const Navbar = () => {
         </div>
         <div className="texts">
           <ul>
-            <li><Link className="side-nav-link">HOME</Link></li>
-            <li><Link className="side-nav-link">ABOUT</Link></li>
-            <li><Link className="side-nav-link">MENU</Link></li>
-            <li><Link className="side-nav-link">RESERVATION</Link></li>
-            <li><Link onClick={() => setIsOpen(!isOpen)} className="side-nav-link opener">SHOP <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i></Link>
+            <li><Link to={"/"} className="side-nav-link">HOME</Link></li>
+            <li><Link to={"/about"} className="side-nav-link">ABOUT</Link></li>
+            <li><Link to={"/menu"} className="side-nav-link">MENU</Link></li>
+            <li><Link to={"/reservation"} className="side-nav-link">RESERVATION</Link></li>
+            <li><Link to={"/shop"} onClick={() => setIsOpen(!isOpen)} className="side-nav-link opener">SHOP <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i></Link>
               <ul className={`shop-texts ${isOpen ? 'active' : ''}`}>
-                <li><Link className="side-nav-link">Shop</Link></li>
+                <li><Link to={"/shop"} className="side-nav-link">Shop</Link></li>
                 <li><Link className="side-nav-link">Shop Cart</Link></li>
                 <li><Link className="side-nav-link">Shop Details</Link></li>
                 <li><Link className="side-nav-link">Shop Checkout</Link></li>
