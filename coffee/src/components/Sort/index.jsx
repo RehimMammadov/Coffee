@@ -11,7 +11,7 @@ const Sort = () => {
         <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
           <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
             <img style={{width: "13px", height: "13px"}} src={Grid} alt="" />
-            <i style={{cursor: "pointer", width: "15px", height: "15px"}} class="fas fa-list-ul"></i>
+            <i style={{cursor: "pointer", width: "15px", height: "15px"}} className="fas fa-list-ul"></i>
           </div>
           <select style={{border: "none", fontSize: "16px", cursor: "pointer"}}>
             <option value="Low">Sort from Low to High Price</option>
