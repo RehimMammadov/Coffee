@@ -1,6 +1,6 @@
 import React from 'react'
 import "./index.scss"
-import Logo from "../../../public/img/logo.png"
+import Logo from "/public/img/logo.png"
 import ScrollToTopButton from '../../components/ScrollToTop'
 
 const Footer = () => {
