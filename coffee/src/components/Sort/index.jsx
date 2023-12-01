@@ -2,13 +2,16 @@ import React from 'react'
 import "./index.scss"
 import useFetchData from '../../hooks/UseFetchData'
 import Grid from "../../../public/svg/apps-grid-icon (1).svg"
+import { useNavigate } from 'react-router-dom'
 
 const Sort = () => {
   const {data} = useFetchData("products");
+  const navigate = useNavigate()
   return (
     <div className='sort-main'>
         <span>Showing 1--{data.length} of {data.length} results</span>
         <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
+          <p onClick={()=>navigate('/wishlist')} >Favorites</p>
           <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
             <img style={{width: "13px", height: "13px"}} src={Grid} alt="" />
             <i style={{cursor: "pointer", width: "15px", height: "15px"}} class="fas fa-list-ul"></i>

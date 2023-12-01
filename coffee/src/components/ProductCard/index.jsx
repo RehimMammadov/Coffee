@@ -10,6 +10,20 @@ const ProductCard = ({ product }) => {
   const { favs, setFavs } = useContext(wishlistContext);
 
   function addWishlist(item) {
+    const find = favs.find((x) => x.id === item.id);
+    if (find) {
+      setFavs([...favs]);
+
+      Swal.fire({
+        title: "Already In Wishlist!!!",
+        icon: "error",
+      });
+      return;
+    }
+    Swal.fire({
+      title: "Added To Wishlist!",
+      icon: "success",
+    });
     setFavs([...favs, { ...item }]);
   }
 
@@ -21,8 +35,8 @@ const ProductCard = ({ product }) => {
       setBasketArr([...basketArr]);
 
       Swal.fire({
-        title: "Already In Cart!!!",
-        icon: "error",
+        title: "Already In Cart!!! Count Increased",
+        icon: "warning",
       });
       return;
     }

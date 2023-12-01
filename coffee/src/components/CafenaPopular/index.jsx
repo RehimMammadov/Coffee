@@ -5,9 +5,31 @@ import { BasketContext } from "../../context/BasketContext";
 import useFetchData from "../../hooks/UseFetchData";
 import Swal from "sweetalert2"
 import "./index.scss";
+import { wishlistContext } from "../../context/WishlistContext";
 
 const CafenaPopular = () => {
   const {basketArr,setBasketArr} = useContext(BasketContext)
+
+
+  const { favs, setFavs } = useContext(wishlistContext);
+
+  function addWishlist(item) {
+    const find = favs.find((x) => x.id === item.id);
+    if (find) {
+      setFavs([...favs]);
+      Swal.fire({
+        title: "Already In Wishlist!!!",
+        icon: "error",
+      });
+      return;
+    }
+    Swal.fire({
+      title: "Added To Wishlist!",
+      icon: "success",
+    });
+    setFavs([...favs, { ...item }]);
+  }
+
 
   function addBasket(item) {
     const find = basketArr.find((x)=>x.id===item.id)
@@ -51,7 +73,7 @@ const CafenaPopular = () => {
                     <div className="links">
                         <i onClick={()=>addBasket(x)} className="fa-solid fa-basket-shopping"></i>
                         <i className="fa-regular fa-eye"></i>
-                        <i className="fa-regular fa-heart"></i>
+                        <i onClick={()=>addWishlist(x)} className="fa-regular fa-heart"></i>
                     </div>
                     <div className="popularImage">
                       <img
