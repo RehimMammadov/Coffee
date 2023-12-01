@@ -1,11 +1,99 @@
-.product-card-main {
+.popularCard {
     width: 245px;
-    height: 370px;
+    border: 1px solid #a7a7a75f;
     border-radius: 8px;
-    border: 1px solid #00000030;
-    text-align: center;
-
-    .like-basket {
-        display: flex;
+    color: var(--colorMain);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover .bg {
+      opacity: 1;
+      transition: 0.5s;
     }
-}
+    &:hover .links {
+      opacity: 1;
+      transition: 0.5s;
+    }
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .links {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      z-index: 2;
+      top: 20px;
+      opacity: 0;
+      transition: 0.5s;
+
+      i {
+        color: #000;
+        padding: 10px;
+        border: 1px solid #a7a7a75f;
+        border-radius: 5px;
+        z-index: 2;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          border: 1px solid #000;
+          transition: 0.5s;
+        }
+      }
+    }
+    .popularImage {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      position: absolute;
+      img {
+        max-width: 188px;
+        max-height: 186px;
+        border-radius: 0;
+        position: static;
+      }
+    }
+    .texts {
+      height: 30%;
+      padding: 0 30px;
+      text-align: center;
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+
+      h2 {
+        color: #a7a7a7;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        width: 200px;
+      }
+
+      .fa-star {
+        color: var(--button-bg-color);
+      }
+      p {
+        color: var(--button-bg-color);
+        span {
+          color: #a7a7a7;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }

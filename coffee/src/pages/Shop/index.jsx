@@ -1,9 +1,11 @@
-import React from 'react';
-import Product from '../../components/Product';
-import Sort from '../../components/Sort';
-import Filter from '../../components/Filter';
+import React, { useContext } from "react";
+import Product from "../../components/Product";
+import Sort from "../../components/Sort";
+import Filter from "../../components/Filter";
+import { searchContext } from "../../context/searchContext";
 
-const Shop = () => {
+const Shop = () => { 
+  
 
   return (
     <>
@@ -27,4 +29,4 @@ const Shop = () => {
   )
 }
 
-export default Shop
+export default Shop;

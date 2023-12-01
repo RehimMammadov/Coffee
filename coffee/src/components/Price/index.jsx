@@ -12,7 +12,7 @@ const Price = () => {
     <div className='search-product'>
       <h2>SEARCH HERE</h2>
       <div className="slidecontainer">
-        <input style={{background: "#c7a17a"}} type="range" min="0" max="10000" value={sliderValue} className="slider" id="myRange" onChange={handleSliderChange} />
+        <input style={{background: "#c7a17a"}} type="range" min="0" max="100" value={sliderValue} className="slider" id="myRange" onChange={handleSliderChange} />
         <div className='price'>
           <p>$0 - ${sliderValue}</p>
           <button>FILTER</button>

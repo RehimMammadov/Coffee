@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./index.scss";
 import "../../App.scss"
 import Logo from "/public/img/logo.png";
 import LogoBlack from "/public/img/logo-black.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { BasketContext } from "../../context/BasketContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const navigate = useNavigate()
+
+  const { basketArr } = useContext(BasketContext);
   return (
     <nav>
       <div className="nav-inner">
@@ -59,8 +62,8 @@ const Navbar = () => {
           <div className="buttons">
             <i onClick={()=>setIsSearchOpen(!isSearchOpen)} className={`fa-solid ${isSearchOpen ? 'fa-xmark' : 'fa-magnifying-glass'}`}></i>
             <i className="fa-regular fa-sun"></i>
-            <i className="fa-solid fa-basket-shopping">
-              <p className="message">0</p>
+            <i onClick={()=>navigate('/basket')} className="fa-solid fa-basket-shopping">
+              <p className="message">{basketArr.length}</p>
             </i>
             <i onClick={() => setIsNavOpen(!isNavOpen)} className="fa-solid fa-bars"></i>
           </div>

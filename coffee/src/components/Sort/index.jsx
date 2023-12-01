@@ -5,6 +5,7 @@ import Grid from "../../../public/svg/apps-grid-icon (1).svg"
 
 const Sort = () => {
   const {data} = useFetchData("products");
+  
   return (
     <div className='sort-main'>
         <span>Showing 1--{data.length} of {data.length} results</span>
@@ -14,9 +15,9 @@ const Sort = () => {
             <i style={{cursor: "pointer", width: "15px", height: "15px"}} className="fas fa-list-ul"></i>
           </div>
           <select style={{border: "none", fontSize: "16px", cursor: "pointer"}}>
+            <option value="Popular">Sort Products By Population</option>
             <option value="Low">Sort from Low to High Price</option>
             <option value="High">Sort from High to low Price</option>
-            <option value="Popular">Sort By Population</option>
           </select>
         </div>
     </div>

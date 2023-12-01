@@ -1,9 +1,33 @@
 import React from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { BasketContext } from "../../context/BasketContext";
 import useFetchData from "../../hooks/UseFetchData";
+import Swal from "sweetalert2"
 import "./index.scss";
 
 const CafenaPopular = () => {
+  const {basketArr,setBasketArr} = useContext(BasketContext)
+
+  function addBasket(item) {
+    const find = basketArr.find((x)=>x.id===item.id)
+    if (find) {
+      find.count++
+      find.total = find.discountPrice*find.count
+      setBasketArr([...basketArr])
+      Swal.fire({
+        title: "Already In Cart!!! Count increased",
+        icon: "warning",
+      });
+      return
+    }
+    Swal.fire({
+      title: "Added To Cart!",
+      icon: "success",
+    });
+    const total = item.discountPrice
+    setBasketArr([...basketArr,{...item,count:1,total}])
+  }
   const { data, isLoading, error } = useFetchData("products");
   const navigate = useNavigate();
   return (
@@ -25,7 +49,7 @@ const CafenaPopular = () => {
                   <div className="popularCard">
                     <div className="bg"></div>
                     <div className="links">
-                        <i className="fa-solid fa-basket-shopping"></i>
+                        <i onClick={()=>addBasket(x)} className="fa-solid fa-basket-shopping"></i>
                         <i className="fa-regular fa-eye"></i>
                         <i className="fa-regular fa-heart"></i>
                     </div>
@@ -44,7 +68,7 @@ const CafenaPopular = () => {
                         <i className="fa-regular fa-star"></i>
                         <i className="fa-regular fa-star"></i>
                       </p>
-                      <h3>{x.name}</h3>
+                      <h3 style={{color: "#fff"}}>{x.name}</h3>
                       <p>
                         PRICE - ${x.discountPrice} <span>${x.price}</span>
                       </p>
