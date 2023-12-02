@@ -1,11 +1,19 @@
 import React from 'react'
 import "./index.scss"
 import useFetchData from '../../hooks/UseFetchData'
+import Loading from '../isLoading';
 
 const Menu = () => {
-  const {data} = useFetchData("menu");
+  const {data, isLoading, error} = useFetchData("menu");
   return (
-    <div>
+    <>
+      {
+        isLoading ? (
+          <Loading />
+        ) : error ? (
+          <p>error</p>
+        ) : (
+          <div>
       <div className='contact-main'>
             <h2>CAFENA MENU</h2>
             <div className='home-slash-page'>
@@ -44,6 +52,9 @@ const Menu = () => {
         ))}
       </div>
     </div>
+        )
+      }
+    </>
   )
 }
 

@@ -9,20 +9,33 @@ import Slider from "../../components/Slider";
 import Story from "../../components/Story";
 import Header from "../../layouts/Header";
 import "./index.scss";
+import useFetchData from "../../hooks/UseFetchData";
+import Loading from "../isLoading";
 
 const Home = () => {
+  const {data, isLoading, error} = useFetchData("best")
   return (
-    <main>
-      <Header />
-      <Best />
-      <Story />
-      <Popular />
-      <CoffeeMachine />
-      <CafenaPopular />
-      <Slider />
-      <Map />
-      <News />
-    </main>
+    <>
+      {
+        isLoading ? (
+          <Loading />
+        ) : error ? (
+          <p>error</p>
+        ) : (
+          <main>
+            <Header />
+            <Best />
+            <Story />
+            <Popular />
+            <CoffeeMachine />
+            <CafenaPopular />
+            <Slider />
+            <Map />
+            <News />
+          </main>
+        )
+      }
+    </>
   );
 };
 

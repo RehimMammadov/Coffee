@@ -14,10 +14,9 @@ const useFetchData = (urlTitle) => {
             } catch (error) {
                 setError("An error occurred while fetching the data.");
             } finally {
-                setIsLoading(false);
-                // setTimeout(() => {
-                //     setIsLoading(false);
-                // }, 500);
+                setTimeout(() => {
+                    setIsLoading(false);
+                }, 1200);
             }
         };
         fetchData();

@@ -2,14 +2,20 @@ import React, { useContext } from "react";
 import Product from "../../components/Product";
 import Sort from "../../components/Sort";
 import Filter from "../../components/Filter";
-import { searchContext } from "../../context/searchContext";
+import useFetchData from "../../hooks/UseFetchData";
+import Loading from "../isLoading";
 
 const Shop = () => { 
-  
-
+  const {data, isLoading, error} = useFetchData("products");
   return (
     <>
-        <div>
+      {
+        isLoading ? (
+          <Loading />
+        ) : error ? (
+          <p>error</p>
+        ) : (
+          <div>
           <div className='contact-main'>
                 <h2>CAFENA PRODUCT</h2>
                 <div className='home-slash-page'>
@@ -24,7 +30,9 @@ const Shop = () => {
               <Filter />
             </div>
           </div>
-        </div>    
+        </div> 
+        )
+      }   
     </>
   )
 }

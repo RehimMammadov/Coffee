@@ -13,6 +13,7 @@ import Basket from "./pages/BasketPage";
 import BasketProvider from "./context/BasketContext";
 import SearchProvider from "./context/searchContext";
 import WishlistPovider from "./context/WishlistContext";
+import Loading from "./pages/isLoading";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
               <Route path="/menu" element={<Menu />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/basket" element={<Basket />} />
+              <Route path="/loading" element={<Loading />} />
             </Route>
           </Routes>
         </WishlistPovider>
