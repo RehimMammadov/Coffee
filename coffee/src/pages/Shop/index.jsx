@@ -5,6 +5,7 @@ import Filter from "../../components/Filter";
 import useFetchData from "../../hooks/UseFetchData";
 import Loading from "../isLoading";
 import Error from "../Error";
+import "./index.scss"
 
 const Shop = () => { 
   const {data, isLoading, error} = useFetchData("products");
@@ -27,7 +28,7 @@ const Shop = () => {
             </div>
             <div style={{ maxWidth: "83%", margin: "0 auto" }}>
               <Sort />
-              <div
+              <div className="shop-main-container"
                 style={{
                   width: "100%",
                   display: "flex",

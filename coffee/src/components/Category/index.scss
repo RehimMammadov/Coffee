@@ -45,3 +45,21 @@
     }
 
 }
+
+@media screen and (max-width: 456px) {
+    .search-svg {
+        width: 250px !important;
+        button {
+            width: 90% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .search-svg {
+        width: 165px !important;
+        button {
+            width: 100% !important;
+        }
+    }
+}

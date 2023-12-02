@@ -51,3 +51,15 @@
     100%{transform: rotate(1turn)}
   }
 }
+
+@media screen and (max-width: 390px) {
+
+  .loading-main {
+    width: 270px;
+  }
+    .cafena-loading {
+      font-size: 110px !important;
+      width: 270px;
+      margin: 20px auto;
+    }
+}
