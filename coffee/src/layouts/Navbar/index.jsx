@@ -81,7 +81,7 @@ const Navbar = () => {
             <li><Link to={"/about"} className="side-nav-link">ABOUT</Link></li>
             <li><Link to={"/menu"} className="side-nav-link">MENU</Link></li>
             <li><Link to={"/reservation"} className="side-nav-link">RESERVATION</Link></li>
-            <li><Link to={"/shop"} onClick={() => setIsOpen(!isOpen)} className="side-nav-link opener">SHOP <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i></Link>
+            <li><Link onClick={() => setIsOpen(!isOpen)} className="side-nav-link opener">SHOP <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i></Link>
               <ul className={`shop-texts ${isOpen ? 'active' : ''}`}>
                 <li><Link to={"/shop"} className="side-nav-link">Shop</Link></li>
                 <li><Link className="side-nav-link">Shop Cart</Link></li>

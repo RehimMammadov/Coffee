@@ -106,3 +106,70 @@
         }
     }
 }
+
+@media  screen  and (max-width: 426px) {
+    #wishlist{
+        padding: 200px 10px;
+    }
+    .wishWrapper{
+        width: 100%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        .wishTexts{
+            width: 80%!important;
+            font-size: 10px!important;
+        }
+    }
+    button{
+        width: 28%!important;
+    }
+}
+
+
+@media  screen and (min-width: 427px) and (max-width: 568px) {
+    #wishlist{
+        padding: 200px 10px;
+    }
+    .wishWrapper{
+        width: 100%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        .wishTexts{
+            width: 80%!important;
+        }
+    }
+}
+
+@media  screen and (min-width: 569px) and (max-width: 768px) {
+    .wishWrapper{
+        width: 100%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+    }
+}
+
+@media  screen and (min-width: 769px) and (max-width: 1024px) {
+    .wishWrapper{
+        width: 90%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #wishlist{
+        .empty{
+            h1{
+            font-size: 30px;
+            }
+        }
+    }
+}
