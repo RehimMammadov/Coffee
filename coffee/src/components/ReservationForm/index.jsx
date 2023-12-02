@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./index.scss"
 import axios from 'axios';
 import useFetchData from '../../hooks/UseFetchData';
+import { Swal } from 'sweetalert2';
 
 const ReservationForm = () => {
   const { data } = useFetchData("reservation");
@@ -23,6 +24,10 @@ const ReservationForm = () => {
 
     try {
       await axios.post("http://localhost:3000/reservation", reservationData);
+      Swal.fire({
+        title: "Your Reservation Completed Successfully!",
+        icon: "success"
+      });
       console.log(data);
     } catch (error) {
       console.log(error);

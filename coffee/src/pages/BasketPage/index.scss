@@ -4,8 +4,36 @@
   background-size: cover;
   min-height: 100vh;
   width: 100%;
-  padding: 200px 100px;
+  padding: 250px 100px;
   color: var(--colorMain);
+
+  .empty{
+    width: 100%;
+    text-align: center;
+    .fa-cart-shopping{
+      font-size: 200px;
+      position: relative;
+      z-index: 0;
+      opacity: 0.4;
+      margin-bottom: 20px;
+      .fa-xmark{
+        top: 5px;
+        left: 35%;
+        font-size: 120px;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        z-index: 1;
+      }
+    }
+    h1{
+      font-size: 50px;
+    }
+    p{
+      cursor: pointer;
+      text-decoration: underline;
+      margin-top: 20px;
+    }
+  }
   .basket-inner {
     h1 {
       font-size: 40px;

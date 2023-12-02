@@ -105,7 +105,7 @@
       "id": 1,
       "name": "Americano Rosted Coffee",
       "img": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-1.png",
-      "category": "Hot Drinks",
+      "category": "Hot Drink",
       "price": 12
     },
     {
@@ -279,6 +279,24 @@
       "time": "20:00",
       "email": "rehim.com",
       "id": 1
+    },
+    {
+      "name": "Ilkin Ehmedov",
+      "number": "0505798656",
+      "seates": "300 seates",
+      "date": "2024-07-05",
+      "time": "15:30",
+      "email": "ilkin656.u@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Ilkin Ehmedov",
+      "number": "0505798656",
+      "seates": "300 seates",
+      "date": "2024-07-05",
+      "time": "15:30",
+      "email": "ilkin656.u@gmail.com",
+      "id": 3
     }
   ]
 }
