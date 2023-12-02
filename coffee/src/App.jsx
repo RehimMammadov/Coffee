@@ -15,6 +15,7 @@ import SearchProvider from "./context/searchContext";
 import WishlistPovider from "./context/WishlistContext";
 import Wishlist from "./pages/Wishlist";
 import Details from "./pages/Details";
+import Error from "./pages/Error";
 
 const App = () => {
   return (

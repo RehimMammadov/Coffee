@@ -11,6 +11,7 @@ import Header from "../../layouts/Header";
 import "./index.scss";
 import useFetchData from "../../hooks/UseFetchData";
 import Loading from "../isLoading";
+import Error from "../Error";
 
 const Home = () => {
   const {data, isLoading, error} = useFetchData("best")
@@ -20,7 +21,7 @@ const Home = () => {
         isLoading ? (
           <Loading />
         ) : error ? (
-          <p>error</p>
+          <Error />
         ) : (
           <main>
             <Header />

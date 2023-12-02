@@ -4,6 +4,7 @@ import "./index.scss";
 import { useNavigate } from "react-router-dom";
 import useFetchData from "../../hooks/UseFetchData";
 import Loading from "../isLoading";
+import Error from "../Error";
 
 const Basket = () => {
   const { basketArr, setBasketArr } = useContext(BasketContext);
@@ -38,7 +39,7 @@ const Basket = () => {
         isLoading ? (
           <Loading />
         ) : error ? (
-          <p>error</p>
+          <Error />
         ) : (
           <section id="basket">
       {basketArr.length === 0

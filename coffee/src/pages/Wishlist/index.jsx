@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { BasketContext } from '../../context/BasketContext';
 import useFetchData from '../../hooks/UseFetchData';
 import Loading from '../isLoading';
+import Error from '../Error';
 
 
 
@@ -40,7 +41,7 @@ function Wishlist() {
                 isLoading ? (
                     <Loading />
                 ) : error ? (
-                    <p>error</p>
+                    <Error />
                 ) : (
                     <section id='wishlist'>
                     {favs.length === 0 ? (

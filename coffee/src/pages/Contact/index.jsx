@@ -3,6 +3,7 @@ import "./index.scss"
 import Form from '../../components/Form'
 import useFetchData from '../../hooks/UseFetchData'
 import Loading from '../isLoading'
+import Error from '../Error'
 
 const Contact = () => {
   const {data, isLoading, error} = useFetchData("contact");
@@ -12,7 +13,7 @@ const Contact = () => {
           isLoading ? (
             <Loading />
           ) : error ? (
-            <p>error</p>
+            <Error />
           ) : (
             <div>
           <div className='contact-main'>

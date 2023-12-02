@@ -4,6 +4,7 @@ import Sort from "../../components/Sort";
 import Filter from "../../components/Filter";
 import useFetchData from "../../hooks/UseFetchData";
 import Loading from "../isLoading";
+import Error from "../Error";
 
 const Shop = () => { 
   const {data, isLoading, error} = useFetchData("products");
@@ -13,7 +14,7 @@ const Shop = () => {
         isLoading ? (
           <Loading />
         ) : error ? (
-          <p>error</p>
+          <Error />
         ) : (
           <div>
             <div className="contact-main">

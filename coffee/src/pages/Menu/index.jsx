@@ -4,6 +4,7 @@ import useFetchData from '../../hooks/UseFetchData'
 import { searchContext } from './../../context/searchContext';
 import { NavLink } from 'react-router-dom';
 import Loading from '../isLoading';
+import Error from '../Error';
 
 const Menu = () => {
   const { data, isLoading, error } = useFetchData("menu");
@@ -15,7 +16,7 @@ const Menu = () => {
         isLoading ? (
           <Loading />
         ) : error ? (
-          <p>error</p>
+           <Error />
         ) : (
           <div>
       <div className='contact-main'>

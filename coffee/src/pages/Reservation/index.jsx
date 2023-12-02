@@ -3,6 +3,7 @@ import "./index.scss"
 import ReservationForm from '../../components/ReservationForm'
 import useFetchData from '../../hooks/UseFetchData'
 import Loading from '../isLoading'
+import Error from '../Error'
 
 const Reservation = () => {
   const { data, isLoading, error } = useFetchData("reservation")
@@ -12,7 +13,7 @@ const Reservation = () => {
         isLoading ? (
           <Loading />
         ) : error ? (
-          <p>error</p>
+          <Error />
         ) : (
           <div>
               <div className='contact-main'>
