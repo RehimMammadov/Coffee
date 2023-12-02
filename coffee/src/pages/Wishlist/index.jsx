@@ -33,7 +33,13 @@ function Wishlist() {
     }
     return (
         <section id='wishlist'>
-            {favs.length === 0 ? (<h1>Your Wishlist Is Empty Currently</h1>) : <div className="wishlist-inner">
+            {favs.length === 0 ? (
+                <div className="empty">
+                    <i class="fa-solid fa-heart">
+                        <i className='fa-solid fa-xmark'></i>
+                    </i>
+                    <h1>Your Wishlist Is Empty Currently</h1>
+                </div>) : <div className="wishlist-inner">
                 <i className='fa-regular fa-heart'></i>
                 <h1>My Wishlist</h1>
                 <div className="wishWrapper">
@@ -48,7 +54,7 @@ function Wishlist() {
                                 <p>Price: <span>${x.discountPrice}</span></p>
                             </div>
                             <button onClick={() => addBasket(x)} >Add To Cart</button>
-                            <i onClick={()=>setFavs(favs.filter((item)=>item.id!==x.id))} className='fa-solid fa-trash-can'></i>
+                            <i onClick={() => setFavs(favs.filter((item) => item.id !== x.id))} className='fa-solid fa-trash-can'></i>
                         </div>
 
                     ))}

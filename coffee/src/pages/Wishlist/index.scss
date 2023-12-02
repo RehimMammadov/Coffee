@@ -8,10 +8,33 @@
     padding: 200px 100px;
     color: var(--colorMain);
 
+    .empty {
+        width: 100%;
+        text-align: center;
+        h1{
+            font-size: 50px;
+        }
+        .fa-heart{
+          font-size: 200px;
+          position: relative;
+          z-index: 0;
+          opacity: 0.4;
+          .fa-xmark{
+            top: 20px;
+            left: 22%;
+            font-size: 150px;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            z-index: 1;
+          }
+        }
+    }
+
     .wishlist-inner {
         width: 100%;
         text-align: center;
-        .fa-heart{
+
+        .fa-heart {
             font-size: 60px;
         }
 
@@ -53,16 +76,19 @@
                     }
 
                 }
-                .fa-trash-can{
+
+                .fa-trash-can {
                     padding: 0 20px;
                     cursor: pointer;
                     transition: 0.5s;
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.2);
                         transition: 0.5s;
                     }
                 }
-                button{
+
+                button {
                     width: 20%;
                     padding: 10px 0;
                     background-color: var(--button-bg-color);
@@ -70,7 +96,8 @@
                     color: var(--colorMain);
                     border-radius: 8px;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         background-color: var(--colorMain);
                         color: var(--button-bg-color);
                     }

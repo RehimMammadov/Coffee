@@ -14,6 +14,7 @@ const Shop = () => {
           <h6>HOME/</h6>
           <span>PRODUCT</span>
         </div>
+        <img className='shape' src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/breadcrumb-shape-2.png" alt="" />
       </div>
       <div style={{ maxWidth: "83%", margin: "0 auto" }}>
         <Sort />

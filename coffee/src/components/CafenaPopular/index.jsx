@@ -8,7 +8,7 @@ import "./index.scss";
 import { wishlistContext } from "../../context/WishlistContext";
 
 const CafenaPopular = () => {
-  const {basketArr,setBasketArr} = useContext(BasketContext)
+  const { basketArr, setBasketArr } = useContext(BasketContext)
 
 
   const { favs, setFavs } = useContext(wishlistContext);
@@ -32,10 +32,10 @@ const CafenaPopular = () => {
 
 
   function addBasket(item) {
-    const find = basketArr.find((x)=>x.id===item.id)
+    const find = basketArr.find((x) => x.id === item.id)
     if (find) {
       find.count++
-      find.total = find.discountPrice*find.count
+      find.total = find.discountPrice * find.count
       setBasketArr([...basketArr])
       Swal.fire({
         title: "Already In Cart!!! Count increased",
@@ -48,7 +48,7 @@ const CafenaPopular = () => {
       icon: "success",
     });
     const total = item.discountPrice
-    setBasketArr([...basketArr,{...item,count:1,total}])
+    setBasketArr([...basketArr, { ...item, count: 1, total }])
   }
   const { data, isLoading, error } = useFetchData("products");
   const navigate = useNavigate();
@@ -68,34 +68,38 @@ const CafenaPopular = () => {
               .filter((x) => x.status === "popular")
               .map((x) => {
                 return (
-                  <div className="popularCard">
-                    <div className="bg"></div>
-                    <div className="links">
-                        <i onClick={()=>addBasket(x)} className="fa-solid fa-basket-shopping"></i>
-                        <i className="fa-regular fa-eye"></i>
-                        <i onClick={()=>addWishlist(x)} className="fa-regular fa-heart"></i>
+                  <>
+
+                    <div className="popularCard">
+                      <div className="bg"></div>
+                      <div className="links">
+                        <i onClick={() => addBasket(x)} className="fa-solid fa-basket-shopping"></i>
+                        <i onClick={()=>navigate(`/details/${x.id}`)} className="fa-regular fa-eye"></i>
+                        <i onClick={() => addWishlist(x)} className="fa-regular fa-heart"></i>
+                      </div>
+                      <div className="popularImage">
+                        <img
+                          src={x.img}
+                          alt=""
+                        />
+                      </div>
+                      <div className="texts">
+                        <p>
+                          COFFEE
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-regular fa-star"></i>
+                          <i className="fa-regular fa-star"></i>
+                        </p>
+                        <h3>{x.name}</h3>
+                        <p>
+                          PRICE - ${x.discountPrice} <span>${x.price}</span>
+                        </p>
+                      </div>
                     </div>
-                    <div className="popularImage">
-                      <img
-                        src={x.img}
-                        alt=""
-                      />
-                    </div>
-                    <div className="texts">
-                      <p>
-                        COFFEE
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </p>
-                      <h3>{x.name}</h3>
-                      <p>
-                        PRICE - ${x.discountPrice} <span>${x.price}</span>
-                      </p>
-                    </div>
-                  </div>
+
+                  </>
                 );
               })
           )}

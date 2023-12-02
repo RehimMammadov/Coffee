@@ -4,10 +4,13 @@ import { BasketContext } from "../../context/BasketContext";
 import { wishlistContext } from "../../context/WishlistContext";
 import Swal from "sweetalert2";
 import "./index.scss";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const { basketArr, setBasketArr } = useContext(BasketContext);
   const { favs, setFavs } = useContext(wishlistContext);
+
+  const navigate = useNavigate()
 
   function addWishlist(item) {
     const find = favs.find((x) => x.id === item.id);
@@ -51,50 +54,9 @@ const ProductCard = ({ product }) => {
   return (
     <div className="product-card-main">
       <div className="like-basket">
-        <div
-          style={{
-            width: "55px",
-            height: "25px",
-            border: "1px solid gray",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          <i
-            onClick={() => addWishlist(product)}
-            class="fa-regular fa-heart"
-            style={{ color: "#000", fontSize: "12px" }}
-          ></i>
-        </div>
-        <div
-          style={{
-            width: "55px",
-            height: "25px",
-            border: "1px solid gray",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          <i
-            onClick={() => addBasket(product)}
-            class="fa-solid fa-basket-shopping"
-            style={{ color: "#000", fontSize: "12px" }}
-          ></i>
-        </div>
-        <div
-          style={{
-            width: "55px",
-            height: "25px",
-            border: "1px solid gray",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          <i
-            class="fa-regular fa-eye"
-            style={{ color: "#000", fontSize: "12px" }}
-          ></i>
-        </div>
+        <i onClick={() => navigate(`/details/${product.id}`)} className="fa-regular fa-eye"></i>
+        <i onClick={() => addBasket(product)} className="fa-solid fa-basket-shopping"></i>
+        <i onClick={() => addWishlist(product)} className="fa-regular fa-heart"></i>
       </div>
       <img
         style={{ height: "135px", width: "auto", margin: "0px, auto" }}
@@ -111,4 +73,11 @@ const ProductCard = ({ product }) => {
   );
 };
 
+
 export default ProductCard;
+
+
+
+
+
+
