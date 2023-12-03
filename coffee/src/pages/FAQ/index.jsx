@@ -23,6 +23,15 @@ const FAQ = () => {
             ) : error ? (
                 <Error />
             ) : (
+                <>
+                <div className='contact-main'>
+                    <h2>ASKING QUESTION</h2>
+                    <div className='home-slash-page'>
+                        <h6>HOME/</h6>
+                        <span>FAQ</span>
+                    </div>
+                    <img className='shape' src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/breadcrumb-shape-2.png" alt="" />
+                </div>
                 <div className='faq-main'>
                     <div className="accordion">
                         {faqItems.map((item, index) => (
@@ -30,6 +39,7 @@ const FAQ = () => {
                         ))}
                     </div>
                 </div>
+                </>
             )
         }
     </>
