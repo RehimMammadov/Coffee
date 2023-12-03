@@ -2,9 +2,14 @@ import React, { useContext } from "react";
 import { BasketContext } from "../../context/BasketContext";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
+import useFetchData from "../../hooks/UseFetchData";
+import Loading from "../isLoading";
+import Error from "../Error";
 
 const Basket = () => {
   const { basketArr, setBasketArr } = useContext(BasketContext);
+  const {data, isLoading, error} = useFetchData("products");
+
   let subtotal = 0;
   basketArr.map((element) => {
     subtotal += element.total;
@@ -29,7 +34,14 @@ const Basket = () => {
   const navigate = useNavigate()
 
   return (
-    <section id="basket">
+    <>
+      {
+        isLoading ? (
+          <Loading />
+        ) : error ? (
+          <Error />
+        ) : (
+          <section id="basket">
       {basketArr.length === 0
         ? (
           <div className="empty">
@@ -93,7 +105,10 @@ const Basket = () => {
             <p className="subtotal">Subtotal: ${subtotal}.00</p>
           </div>
         )}
-    </section>
+      </section>
+        )
+      }
+    </>
   );
 };
 

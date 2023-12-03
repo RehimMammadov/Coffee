@@ -41,6 +41,9 @@ const Navbar = () => {
         <div className="right-side-nav">
           <div className="nav-texts">
             <ul>
+            <li className="sublink">
+                <NavLink className={'navlink'} to={"/faq"}><div className="circle"></div>FAQ</NavLink>
+            </li>
               <li className="sublink">
 
                 <NavLink className={'navlink'} to={"/shop"}><div className="circle"></div>SHOP</NavLink>

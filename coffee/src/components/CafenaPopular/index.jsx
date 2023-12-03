@@ -70,7 +70,7 @@ const CafenaPopular = () => {
                 return (
                   <>
 
-                    <div className="popularCard">
+                    <div className="popularCard3">
                       <div className="bg"></div>
                       <div className="links">
                         <i onClick={() => addBasket(x)} className="fa-solid fa-basket-shopping"></i>

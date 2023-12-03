@@ -1,21 +1,33 @@
 import React from 'react'
 import "./index.scss"
 import ReservationForm from '../../components/ReservationForm'
+import useFetchData from '../../hooks/UseFetchData'
+import Loading from '../isLoading'
+import Error from '../Error'
 
 const Reservation = () => {
+  const { data, isLoading, error } = useFetchData("reservation")
   return (
-    <div>
-      <div className='contact-main'>
-        <h2>RESERVATION</h2>
-        <div className='home-slash-page'>
-          <h6>HOME/</h6>
-          <span>MENU</span>
-        </div>
-        <img className='shape' src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/breadcrumb-shape-2.png" alt="" />
-
-      </div>
-      <ReservationForm />
-    </div>
+    <>
+      {
+        isLoading ? (
+          <Loading />
+        ) : error ? (
+          <Error />
+        ) : (
+          <div>
+              <div className='contact-main'>
+                    <h2>RESERVATION</h2>
+                    <div className='home-slash-page'>
+                      <h6>HOME/</h6>
+                      <span>MENU</span>
+                    </div>
+              </div>
+              <ReservationForm />
+          </div>
+        )
+      }
+    </>
   )
 }
 

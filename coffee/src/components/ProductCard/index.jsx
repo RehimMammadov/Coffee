@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
   }
 
   return (
-    <div className={`${isFull ? "product-card-second" : "product-card-main"}`}>
+    <div className={`${isFull ? "product-card-second" : "popularCard"}`}>
       <img
         style={{ height: "135px", width: "auto", margin: "0px, auto" }}
         src={product.img}

@@ -3,13 +3,22 @@ import "./index.scss"
 import useFetchData from '../../hooks/UseFetchData'
 import { searchContext } from './../../context/searchContext';
 import { NavLink } from 'react-router-dom';
+import Loading from '../isLoading';
+import Error from '../Error';
 
 const Menu = () => {
-  const { data } = useFetchData("menu");
+  const { data, isLoading, error } = useFetchData("menu");
   const { category, setCategory } = useContext(searchContext)
 
   return (
-    <div>
+    <>
+      {
+        isLoading ? (
+          <Loading />
+        ) : error ? (
+           <Error />
+        ) : (
+          <div>
       <div className='contact-main'>
         <h2>CAFENA MENU</h2>
         <div className='home-slash-page'>
@@ -37,7 +46,7 @@ const Menu = () => {
         {data
           .filter((item) => item.category === category || category === 'All')
           .map((item) => (
-            <div key={item.id} className="popularCard">
+            <div key={item.id} className="popularCard2">
               <div className="bg-animation"></div>
               <img src={item.img} alt="" />
               <div className="details">
@@ -51,6 +60,9 @@ const Menu = () => {
           ))}
       </div>
     </div>
+        )
+      }
+    </>
   )
 }
 

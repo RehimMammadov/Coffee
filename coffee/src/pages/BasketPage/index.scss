@@ -4,7 +4,7 @@
   background-size: cover;
   min-height: 100vh;
   width: 100%;
-  padding: 200px 100px;
+  padding: 250px 100px;
   color: var(--colorMain);
 
   .empty {
@@ -34,6 +34,7 @@
     p {
       cursor: pointer;
       text-decoration: underline;
+      margin-top: 20px;
     }
   }
 

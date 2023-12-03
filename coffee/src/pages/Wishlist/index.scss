@@ -5,7 +5,7 @@
     background-position: center;
     min-height: 100vh;
     width: 100%;
-    padding: 200px 100px;
+    padding: 250px 100px;
     color: var(--colorMain);
 
     .empty {
@@ -64,14 +64,17 @@
 
                 .wishTexts {
                     width: 60%;
-                    text-align: center;
+                    text-align: left;
+                    padding-left: 35px;
 
                     span {
-                        font-weight: normal;
+                        font-weight: 500;
+                        color: #c7a17a;
+                        font-size: 20px;
                     }
 
                     p {
-                        font-weight: bold;
+                        font-weight: 500;
                         font-size: 24px;
                     }
 

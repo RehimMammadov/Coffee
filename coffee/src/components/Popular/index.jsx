@@ -13,7 +13,7 @@ const Popular = () => {
       </div>
       <div className="wrapper">
         {data.map((item) => (
-          <div className="popularCard">
+          <div className="popularCard4">
             <div className="bg-animation"></div>
             <img src={item.img} alt="" />
             <div className="details">

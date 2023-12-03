@@ -7,7 +7,7 @@ import { searchContext } from '../../context/searchContext';
 const Product = () => {
   const {inputValue,category,sliderValue} = useContext(searchContext)
   const { data, isLoading, error } = useFetchData("products");
-console.log(data);
+  console.log(data);
   return (
     <div className='products-main-container'>
         {

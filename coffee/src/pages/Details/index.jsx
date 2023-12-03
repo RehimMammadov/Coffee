@@ -6,11 +6,12 @@ import { useContext } from 'react';
 import { BasketContext } from '../../context/BasketContext';
 import Swal from 'sweetalert2';
 import { detailsContext } from '../../context/DetailsContext';
+import Loading from '../isLoading';
 function Details() {
 
     const { itemId } = useParams();
 
-    const { data } = useFetchData(`Products/${itemId}`)
+    const { data, isLoading, error } = useFetchData(`Products/${itemId}`)
 
     const {basketArr , setBasketArr} = useContext(BasketContext)
 
@@ -40,7 +41,13 @@ function Details() {
 
     return (
         <>
-            <div className="productDetails">
+            {
+                isLoading ? (
+                    <Loading />
+                ) : error ? (
+                    <Error />
+                ) : (
+                    <div className="productDetails">
                     <div className="productDetails-inner">
                         <div className="details-img">
                             <img src={data.img} alt="" />
@@ -79,7 +86,8 @@ function Details() {
                     </div>
 
             </div>
-
+                )
+            }
         </>
     )
 }

@@ -1,11 +1,12 @@
-.product-card-main {
+.popularCard {
     width: 245px;
-    height: 370px;
+    border: 1px solid #a7a7a75f;
     border-radius: 8px;
     border: 1px solid hsla(0, 0%, 0%, 0.188);
     text-align: center;
     position: relative;
     transition: all 0.5s;
+    padding: 50px 0;
 
     p {
         margin-top: 10px;
@@ -37,7 +38,7 @@
 
     .like-basket {
         position: absolute;
-        bottom: 30px;
+        bottom: 0px;
         left: 25%;
         display: flex;
         width: 80px;
@@ -66,10 +67,10 @@
 .product-card-second {
     width: 80%;
     display: flex;
+    padding: 20px;
     gap: 10px;
     height: fit-content;
     position: relative;
-    padding: 20px;
     border-radius: 8px;
     border: 1px solid hsla(0, 0%, 0%, 0.188);
     transition: all 0.5s;
@@ -129,4 +130,10 @@
         }
     }
 
+}
+@media screen and (max-width: 568px) {
+    .product-card-second{
+        width: 100%;
+        padding: 50px 20px!important;
+    }
 }

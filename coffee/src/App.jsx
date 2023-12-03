@@ -16,6 +16,8 @@ import WishlistPovider from "./context/WishlistContext";
 import Wishlist from "./pages/Wishlist";
 import Details from "./pages/Details";
 import DetailsProvider from "./context/DetailsContext";
+import Loading from "./pages/isLoading";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   return (
@@ -35,6 +37,7 @@ const App = () => {
                 <Route path="/basket" element={<Basket />} />
                 <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/details/:itemId" element={<Details />} />
+                <Route path="/faq" element={<FAQ />} />
               </Route>
             </Routes>
           </DetailsProvider>
