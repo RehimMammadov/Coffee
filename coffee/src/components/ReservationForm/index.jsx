@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./index.scss"
 import axios from 'axios';
 import useFetchData from '../../hooks/UseFetchData';
-import { Swal } from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 const ReservationForm = () => {
   const { data } = useFetchData("reservation");
