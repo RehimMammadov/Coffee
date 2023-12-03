@@ -2,15 +2,47 @@
     width: 245px;
     height: 370px;
     border-radius: 8px;
-    border: 1px solid #00000030;
+    border: 1px solid hsla(0, 0%, 0%, 0.188);
     text-align: center;
     position: relative;
+    transition: all 0.5s;
+
+    p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #a7a7a7;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    h5 {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+
+        .discount {
+            color: #c7a17a;
+        }
+
+        .price {
+            color: #a7a7a7;
+            text-decoration: line-through;
+        }
+    }
 
     .like-basket {
         position: absolute;
         bottom: 30px;
         left: 25%;
         display: flex;
+        width: 80px;
+        gap: 10px;
+        margin: 15px auto 15px auto;
 
         i {
             font-size: 20px;
@@ -29,4 +61,72 @@
             }
         }
     }
+}
+
+.product-card-second {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    height: fit-content;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid hsla(0, 0%, 0%, 0.188);
+    transition: all 0.5s;
+
+    p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #a7a7a7;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    h5 {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+
+        .discount {
+            color: #c7a17a;
+        }
+
+        .price {
+            color: #a7a7a7;
+            text-decoration: line-through;
+        }
+    }
+
+    .like-basket {
+        position: absolute;
+        bottom: 0;
+        right: 70px;
+        display: flex;
+        width: 80px;
+        gap: 10px;
+        margin: 15px auto 15px auto;
+
+        i {
+            font-size: 20px;
+            border: 1px solid var(--button-bg-color);
+            padding: 5px;
+            border-radius: 8px;
+            opacity: 0.8;
+            cursor: pointer;
+            color: var(--button-bg-color);
+            transition: 0.5s;
+
+            &:hover {
+                background-color: var(--button-bg-color);
+                color: var(--colorMain);
+                transition: 0.5s;
+            }
+        }
+    }
+
 }

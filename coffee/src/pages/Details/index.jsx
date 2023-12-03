@@ -5,6 +5,7 @@ import "./index.scss";
 import { useContext } from 'react';
 import { BasketContext } from '../../context/BasketContext';
 import Swal from 'sweetalert2';
+import { detailsContext } from '../../context/DetailsContext';
 function Details() {
 
     const { itemId } = useParams();
@@ -13,7 +14,9 @@ function Details() {
 
     const {basketArr , setBasketArr} = useContext(BasketContext)
 
-    function addBasket(item) {
+    const {inputValue,setInputValue} = useContext(detailsContext)
+
+    function addBasket(item,itemCount) {
         const find = basketArr.find((x) => x.id === item.id);
         if (find) {
           find.count++;
@@ -30,8 +33,8 @@ function Details() {
           title: "Added To Cart!",
           icon: "success",
         });
-        const total = item.discountPrice;
-        setBasketArr([...basketArr, { ...item, count: 1, total }]);
+        const total = item.discountPrice * itemCount;
+        setBasketArr([...basketArr, { ...item, count: itemCount, total }]);
       }
 
 
@@ -56,8 +59,8 @@ function Details() {
                                 Fusce eget turpis orci.</p>
                             <div className="details-qty">
                                 <p>QTY</p>
-                                <input type="number" />
-                                <button onClick={()=>addBasket(data)}>ADD TO CART</button>
+                                <input onChange={(e)=>setInputValue(e.target.value)} type="number" />
+                                <button onClick={()=>addBasket(data,inputValue)}>ADD TO CART</button>
                             </div>
                             <div className="det-categ">
                                 <p>CATEGORY:</p>

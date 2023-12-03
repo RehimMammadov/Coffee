@@ -13,7 +13,7 @@ const Category = () => {
   return (
     <div className='search-product'>
       <h2>FILTER HERE</h2>
-      <button onClick={()=>ProductCat("All")}>Show All</button>
+      <button className='showAll' onClick={()=>ProductCat("All")} >Show All</button>
       <div onClick={()=>ProductCat("CREUSET COFFEE")} className='search-svg'>
         <button>CREUSET COFFEE<span>03</span></button>
       </div>

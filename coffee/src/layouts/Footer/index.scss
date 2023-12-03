@@ -51,7 +51,7 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 50px;
+                gap: 20px;
                 border-bottom: 1px solid var(--colorMain);
 
                 input {
@@ -188,6 +188,7 @@ footer {
                     width: 45%;
                 }
                 .email{
+                    justify-content: space-between;
                     padding-top: 30px;
                     width: 80%;
                 }

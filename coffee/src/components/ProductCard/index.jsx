@@ -5,10 +5,12 @@ import { wishlistContext } from "../../context/WishlistContext";
 import Swal from "sweetalert2";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
+import { searchContext } from "../../context/searchContext";
 
 const ProductCard = ({ product }) => {
   const { basketArr, setBasketArr } = useContext(BasketContext);
   const { favs, setFavs } = useContext(wishlistContext);
+  const {isFull} = useContext(searchContext)
 
   const navigate = useNavigate()
 
@@ -52,23 +54,25 @@ const ProductCard = ({ product }) => {
   }
 
   return (
-    <div className="product-card-main">
-      <div className="like-basket">
-        <i onClick={() => navigate(`/details/${product.id}`)} className="fa-regular fa-eye"></i>
-        <i onClick={() => addBasket(product)} className="fa-solid fa-basket-shopping"></i>
-        <i onClick={() => addWishlist(product)} className="fa-regular fa-heart"></i>
-      </div>
+    <div className={`${isFull ? "product-card-second" : "product-card-main"}`}>
       <img
         style={{ height: "135px", width: "auto", margin: "0px, auto" }}
         src={product.img}
         alt=""
       />
-      <p>{product.category}</p>
-      <h4>{product.name}</h4>
-      <h5>
-        PRICE - <span className="discount">${product.discountPrice} / </span>{" "}
-        <span className="price">${product.price}</span>
-      </h5>
+      <div className="product-card-texts">
+        <p>{product.category}</p>
+        <h4>{product.name}</h4>
+        <h5>
+          PRICE - <span className="discount">${product.discountPrice} / </span>{" "}
+          <span className="price">${product.price}</span>
+        </h5>
+      </div>
+      <div className="like-basket">
+        <i onClick={() => navigate(`/details/${product.id}`)} className="fa-regular fa-eye"></i>
+        <i onClick={() => addBasket(product)} className="fa-solid fa-basket-shopping"></i>
+        <i onClick={() => addWishlist(product)} className="fa-regular fa-heart"></i>
+      </div>
     </div>
   );
 };

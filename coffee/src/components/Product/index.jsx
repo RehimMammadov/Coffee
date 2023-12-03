@@ -5,13 +5,14 @@ import useFetchData from '../../hooks/UseFetchData';
 import { searchContext } from '../../context/searchContext';
 
 const Product = () => {
-  const {inputValue,category} = useContext(searchContext)
+  const {inputValue,category,sliderValue} = useContext(searchContext)
   const { data, isLoading, error } = useFetchData("products");
 console.log(data);
   return (
     <div className='products-main-container'>
         {
           data && data
+          .filter(x=>{return x.discountPrice < parseInt(sliderValue,10)})
           .filter((x)=>x.category===category || category==='All')
           .filter((x)=>x.name.trim().toLowerCase().includes(inputValue.trim().toLowerCase()))
           .map((product) => {
