@@ -84,18 +84,18 @@ function Details() {
                   ADD TO CART
                 </button>
               </div>
-              <div className="det-categ">
+              {/* <div className="det-categ">
                 <p>CATEGORY:</p>
                 <p style={{ color: "gray" }}>{data.category}</p>
-              </div>
-              <div className="det-sku">
+              </div> */}
+              {/* <div className="det-sku">
                 <p>SKU:</p>
                 <p style={{ color: "gray" }}>2584-MK63</p>
               </div>
               <div className="det-brand">
                 <p>BRAND:</p>
                 <p style={{ color: "gray" }}>BRENDA</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
