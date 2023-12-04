@@ -126,6 +126,14 @@
 
 @media screen and (max-width: 768px) {
     #popularPoduct{
+      .container{
+        .textAndButton{
+          flex-wrap: wrap;
+          button{
+            width: 200px!important;
+          }
+        }
+      }
         .wrapper{
             width: 95%;
             flex-wrap: wrap;
@@ -134,9 +142,6 @@
                 min-height: 420px!important;
                 .popularImage{
                     height: 70%!important;
-                    img{
-                        width: 100px!important;
-                    }
                 }
                 .texts{
                     height: 30% !important;

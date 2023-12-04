@@ -209,6 +209,9 @@
 
 @media (min-width: 370px) and (max-width: 539px) {
     .form-main-container {
+        button{
+            width: 80%!important;
+        }
 
         h1 {
             text-align: left !important;
@@ -248,6 +251,9 @@
 
 @media  (min-width: 280px) and (max-width: 369px) {
     .form-main-container {
+        button{
+            width: 100%!important;
+        }
         h1 {
             text-align: left !important;
             margin-left: -50px !important;

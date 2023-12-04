@@ -93,7 +93,7 @@ const Navbar = () => {
                 <hr />
               </ul>
             </li>
-            <li><Link className="side-nav-link">CONTACT</Link></li>
+            <li><Link to={'/contact'} className="side-nav-link">CONTACT</Link></li>
           </ul>
         </div>
       </div>
