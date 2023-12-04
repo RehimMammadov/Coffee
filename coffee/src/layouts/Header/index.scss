@@ -20,19 +20,25 @@ header {
       margin: 20px 0;
     }
 
-    button {
-      padding: 10px 30px;
-      font-weight: bold;
-      background-color: transparent;
-      color: var(--colorMain);
-      border: 2px solid gray;
-      margin: 50px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    .header-buttons {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      button {
+        width: 35%;
+        padding: 10px 30px;
+        font-weight: bold;
+        background-color: transparent;
+        color: var(--colorMain);
+        border: 2px solid gray;
+        margin: 50px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-    .beige-button {
-      background-color: var(--button-bg-color);
+      .beige-button {
+        background-color: var(--button-bg-color);
+      }
     }
   }
 
@@ -137,9 +143,11 @@ header {
       h1 {
         font-size: 35px;
       }
-
-      button {
-        margin: 10px 10px;
+      .header-buttons {
+        button {
+          width: 80% !important;
+          margin: 10px 10px;
+        }
       }
     }
 
@@ -180,9 +188,11 @@ header {
       h1 {
         font-size: 35px;
       }
-
-      button {
-        margin: 10px 10px;
+      .header-buttons {
+        button {
+          width: 50% !important;
+          margin: 10px 10px;
+        }
       }
     }
 

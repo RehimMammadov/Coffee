@@ -166,11 +166,14 @@ nav {
           }
 
           .message {
+            background-color: var(--button-bg-color);
+            padding: 5px;
+            border-radius: 100%;
             font-weight: normal;
             position: absolute;
-            top: 0;
-            font-size: 14px;
-            right: -15px;
+            top: -5px;
+            font-size: 10px;
+            right: -10px;
             color: var(--colorMain);
           }
         }
