@@ -26,7 +26,7 @@ const About = () => {
                   <p>ABOUT CAFENA</p>
                   <h3>HOME / <span>ABOUT US</span></h3>
                 </div>
-                <img className='shape' src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/breadcrumb-shape-2.png" alt="" />
+                <img className='shape' src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/breadcrumb-shape-2.png" alt="img" />
               </div>
               <BestHouse/>
               <BestService/>
