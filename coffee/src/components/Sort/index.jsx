@@ -49,10 +49,10 @@ const Sort = () => {
           <img onClick={() => setIsFull(false)} style={{ cursor: "pointer", width: "13px", height: "13px" }} src={Grid} alt="" />
           <i onClick={() => setIsFull(true)} style={{ cursor: "pointer", width: "15px", height: "15px" }} class="fas fa-list-ul"></i>
         </div>
-        <select  style={{ border: "none", fontSize: "16px", cursor: "pointer" }}>
+        {/* <select  style={{ border: "none", fontSize: "16px", cursor: "pointer" }}>
           <option value="desc">Sort from Low to High Price</option>
           <option value="asc">Sort from High to low Price</option>
-        </select>
+        </select> */}
         {/* <button>Sort</button> */}
       </div>
     </div>
