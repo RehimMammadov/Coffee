@@ -21,15 +21,15 @@ export const getReservationById = async (req, res) => {
 export const insertReservation = async (req, res) => {
     try {
         const reservation = new RezerveSchema({
-            username: req.query.username,
+            name: req.query.name,
             email: req.query.email,
-            country: req.query.country,
-            city: req.query.city,
+            seates: req.query.seates,
             phone: req.query.phone,
-            password: req.query.password
+            date: req.query.date,
+            time: req.query.time
         })
         reservation.save()
-        res.status(201).send({msg: "User created"})
+        res.status(201).send({msg: "Reservation created"})
     } catch (error) {
         res.status(500).send({msg: error});
     }
@@ -39,14 +39,14 @@ export const updateReservationById = async (req, res) => {
     try {
         const reservation = await RezerveSchema.findByIdAndUpdate(req.params.id)
         if(reservation) {
-            user.username = req.query.username,
+            user.name = req.query.name,
             user.email = req.query.email,
-            user.country = req.query.country
-            user.city = req.query.city           
+            user.seates = req.query.seates
+            user.date = req.query.date           
             user.phone = req.query.phone           
-            user.password = req.query.password           
+            user.time = req.query.time           
             await reservation.save()
-            res.send({msg: "User Updated"})
+            res.send({msg: "Reservation Updated"})
         } else {
             res.status(404).json({message:"Not Found"})
         }
@@ -58,7 +58,7 @@ export const updateReservationById = async (req, res) => {
 export const deleteReservationById = async (req, res) => {
     try { 
         await RezerveSchema.findByIdAndDelete(req.params.id) ? 
-            res.status(200).send({msg: "User Deleted"}) : 
+            res.status(200).send({msg: "Reservation Deleted"}) : 
                 res.status(404).send({msg: "Not Found"})        
     } catch (error) {
         res.status(500).send({msg: error})

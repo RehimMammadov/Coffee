@@ -5,8 +5,8 @@ const contactRouter = express.Router()
 
 contactRouter.get('', getContacts)
 contactRouter.get('/:id', getContactById)
-contactRouter.delete('/:id', insertContact)
+contactRouter.delete('/', insertContact)
 contactRouter.put('/:id', updateContactById)
-contactRouter.post('', deleteContactById)
+contactRouter.post('/:id', deleteContactById)
 
 module.exports = contactRouter
