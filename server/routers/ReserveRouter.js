@@ -5,8 +5,8 @@ const reserveRouter = express.Router()
 
 reserveRouter.get('', getReservations)
 reserveRouter.get('/:id', getReservationById)
-reserveRouter.delete('/:id', insertReservation)
+reserveRouter.delete('/', insertReservation)
 reserveRouter.put('/:id', updateReservationById)
-reserveRouter.post('', deleteReservationById)
+reserveRouter.post('/:id', deleteReservationById)
 
 module.exports = reserveRouter
